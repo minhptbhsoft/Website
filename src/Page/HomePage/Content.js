@@ -37,19 +37,19 @@ export default class Content extends React.Component {
                         </div>
                         <Row style={{ fontSize: 70 }} className="cando1">
                             <Col className="cando">
-                                <i class="fas fa-drafting-compass"></i>
+                                <i className="fas fa-drafting-compass"></i>
                                 <h2>DESIGN</h2>
                             </Col>
                             <Col className="cando">
-                                <i class="fas fa-code"></i>
+                                <i className="fas fa-code"></i>
                                 <h2>PROGRAMMING</h2>
                             </Col>
                             <Col className="cando">
-                                <i class="fab fa-codepen"></i>
+                                <i className="fab fa-codepen"></i>
                                 <h2>LABORIUOS</h2>
                             </Col>
                             <Col className="cando">
-                                <i class="fas fa-brain"></i>
+                                <i className="fas fa-brain"></i>
                                 <h2>CREATIVE</h2>
                             </Col>
                         </Row>

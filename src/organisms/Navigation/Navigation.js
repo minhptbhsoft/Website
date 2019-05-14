@@ -6,7 +6,6 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-import '../../style/style';
 export default class Example extends React.Component {
 
   render() {
@@ -20,6 +19,9 @@ export default class Example extends React.Component {
             </NavItem>
             <NavItem className="title-homepage">
               <NavLink style={{ color: "white", padding:5 }} href="/contact">~Contact~</NavLink>
+            </NavItem>
+            <NavItem className="title-homepage">
+              <NavLink style={{ color: "white", padding:5,marginRight:150 }} href="/comment">~Comment~</NavLink>
             </NavItem>
           </Nav>
         </Navbar>

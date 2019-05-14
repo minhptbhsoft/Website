@@ -1,8 +1,35 @@
 import React from 'react';
 import { Row, Col, Container, Button, Form, FormGroup, Label, Input,} from 'reactstrap';
 export default class Contactpage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [],
+            isLoaded: false,
+        }
+    }
+    upcontact() {
+        var url = 'http://localhost:3000/contacts';
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var description = document.getElementById("description").value;
+        var data = { name, email, phone, description };
+        fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .then(response => console.log('Success:', JSON.stringify(response)))
+            .catch(error => console.error('Error:', error));
+        window.location.reload();
+        alert("Your infor has been save...");
+    }
+
     render() {
-        var styleb={
+        var styleb = {
             height: 50,
         }
         return (
@@ -33,21 +60,21 @@ export default class Contactpage extends React.Component {
                     <Form style={{textAlign: 'left'}}>
                         <FormGroup>
                             <Label className="styleq" for="exampleEmail">Name</Label>
-                            <Input style={styleb} type="name" name="Your Name" id="" placeholder="Your name" />
+                            <Input style={styleb} type="name" name="Your Name" id="name" placeholder="Your name" />
                         </FormGroup>
                         <FormGroup>
                             <Label className="styleq" for="exampleEmail">Email</Label>
-                            <Input style={styleb}  type="email" name="email" id="" placeholder="Your email" />
+                            <Input style={styleb}  type="email" name="email" id="email" placeholder="Your email" />
                         </FormGroup>
                         <FormGroup>
                             <Label className="styleq" for="examplePassword">Phone</Label>
-                            <Input style={styleb}  type="password" name="password" id="" placeholder="Phone number" />
+                            <Input style={styleb}  type="password" name="password" id="phone" placeholder="Phone number" />
                              </FormGroup>
                         <FormGroup>
                             <Label className="styleq" for="exampleText">Description</Label>
-                            <Input style={styleb}  type="textarea" name="text" id="" />
+                            <Input style={styleb}  type="textarea" name="text" id="description" />
                         </FormGroup>
-                        <Button>Submit</Button>
+                        <Button onClick={this.upcontact}>Submit</Button>
                     </Form>
                     </Col>
                     <Col md={{size: 5}} style={{textAlign: 'left'}}>

@@ -11,11 +11,10 @@
     "reactstrap": "^8.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "install": "npm-git install"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,8 +30,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "gitDependencies": {
-      "private-package-name": "git@github.com:minhptbhsoft/learning.git"
   }
 }
