@@ -7,7 +7,7 @@ import Navigation from './organisms/Navigation/Navigation';
 import Contactpage from './Page/ContactPage/Contactpage';
 import Footer from './organisms/Footer/Footer';
 import Commentpage from './Page/CommentPage/Commentpage';
-
+import Solarpage from './Page/SolarSystem/Solarpage';
 function App() {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ function App() {
             <Route path="/aboutpage" component={Aboutpage}/>
             <Route path="/contact" component={Contactpage}/>
             <Route path="/comment" component={Commentpage}/>
+            <Route path="/solarpage" component={Solarpage}/>
         </Switch>
       <Footer></Footer>
       </Router>

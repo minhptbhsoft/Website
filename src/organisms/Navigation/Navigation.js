@@ -21,7 +21,10 @@ export default class Example extends React.Component {
               <NavLink style={{ color: "white", padding:5 }} href="/contact">~Contact~</NavLink>
             </NavItem>
             <NavItem className="title-homepage">
-              <NavLink style={{ color: "white", padding:5,marginRight:150 }} href="/comment">~Comment~</NavLink>
+              <NavLink style={{ color: "white", padding:5,marginRight:0 }} href="/comment">~Comment~</NavLink>
+            </NavItem>
+            <NavItem className="title-homepage">
+              <NavLink style={{ color: "white", padding:5,marginRight:150 }} href="/solarpage">~Solar <br></br> System~</NavLink>
             </NavItem>
           </Nav>
         </Navbar>
